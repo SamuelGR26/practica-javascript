@@ -1,6 +1,6 @@
-# Prácticas de JavaScript - Unidad 1
+# Prácticas de JavaScript - Unidad
 
-Este repositorio contiene las prácticas de JavaScript realizadas por **Samuel González Rodríguez** como parte de los ejercicios de programación en la universidad.
+Este repositorio contiene las prácticas de JavaScript realizadas por **Samuel González Rodríguez** como parte de los ejercicios del Tecnico En Programación Web.
 
 ## Contenido
 
