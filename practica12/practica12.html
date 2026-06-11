@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Práctica 12</title></head>
+<body>
+  <!-- practica12.html
+       Arreglo de 5 notas, promedio y estado -->
+  <h1>Práctica 12 — Notas y Promedio</h1>
+  Notas (coma separadas): <input id="notas" value="80,90,75,95,85" style="width:60%">
+  <button onclick="run()">Calcular</button>
+  <pre id="out"></pre>
+
+  <script>
+    function run(){
+      const raw = document.getElementById('notas').value;
+      const notas = raw.split(',').map(s=>Number(s.trim())).filter(n=>!isNaN(n));
+      if(notas.length===0){ document.getElementById('out').textContent='Introduce notas válidas.'; return; }
+      const suma = notas.reduce((a,b)=>a+b,0);
+      const promedio = suma / notas.length;
+      const estado = promedio >= 60 ? 'APROBADO' : 'REPROBADO';
+      const texto = `Notas: ${notas.join(', ')}\nPromedio: ${promedio}\nEstado: ${estado}`;
+      document.getElementById('out').textContent = texto;
+      console.log(texto);
+    }
+  </script>
+</body>
+</html>

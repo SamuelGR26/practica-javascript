@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Práctica 9</title></head>
+<body>
+  <!-- practica9.html
+       Números pares del 1 al 100 -->
+  <h1>Práctica 9 — Números Pares 1..100</h1>
+  <button onclick="run()">Mostrar pares</button>
+  <pre id="out"></pre>
+
+  <script>
+    function run(){
+      const pares = [];
+      for(let i=2;i<=100;i+=2) pares.push(i);
+      const texto = pares.join(', ');
+      document.getElementById('out').textContent = texto;
+      console.log(texto);
+    }
+  </script>
+</body>
+</html>

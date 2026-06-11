@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Práctica 7</title></head>
+<body>
+  <!-- practica7.html
+       Día de la semana con switch -->
+  <h1>Práctica 7 — Día de la Semana</h1>
+  Número (1-7): <input id="n" type="number" value="3" min="1" max="7">
+  <button onclick="run()">Mostrar</button>
+  <pre id="out"></pre>
+
+  <script>
+    function dia(num){
+      switch(num){
+        case 1: return 'Lunes';
+        case 2: return 'Martes';
+        case 3: return 'Miércoles';
+        case 4: return 'Jueves';
+        case 5: return 'Viernes';
+        case 6: return 'Sábado';
+        case 7: return 'Domingo';
+        default: return 'Número inválido';
+      }
+    }
+    function run(){
+      const num = Number(document.getElementById('n').value);
+      const texto = `Número: ${num}\nDía: ${dia(num)}`;
+      document.getElementById('out').textContent = texto;
+      console.log(texto);
+    }
+  </script>
+</body>
+</html>

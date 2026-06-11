@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Práctica 1</title></head>
+<body>
+  <!-- practica1.html
+       Declara variables personales y muestra la información en pantalla y consola -->
+  <h1>Práctica 1 — Mi Primer Programa</h1>
+  <button onclick="run()">Ejecutar</button>
+  <pre id="out"></pre>
+
+  <script>
+    function run() {
+      const nombre = "Samuel";
+      const apellido = "Gonzalez";
+      const edad = 39;
+      const ciudad = "Santo Domingo";
+      const texto = `Nombre: ${nombre}\nApellido: ${apellido}\nEdad: ${edad}\nCiudad: ${ciudad}`;
+      document.getElementById('out').textContent = texto;
+      console.log(texto);
+    }
+  </script>
+</body>
+</html>

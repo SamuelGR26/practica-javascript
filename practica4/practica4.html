@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Práctica 4</title></head>
+<body>
+  <!-- practica4.html
+       Cálculo de edad -->
+  <h1>Práctica 4 — Cálculo de Edad</h1>
+  Año actual: <input id="a" type="number" value="2026">
+  Año nacimiento: <input id="n" type="number" value="2000">
+  <button onclick="run()">Calcular</button>
+  <pre id="out"></pre>
+
+  <script>
+    function run() {
+      const a = Number(document.getElementById('a').value);
+      const n = Number(document.getElementById('n').value);
+      const edad = a - n;
+      const texto = `Año actual: ${a}\nNacimiento: ${n}\nEdad: ${edad} años`;
+      document.getElementById('out').textContent = texto;
+      console.log(texto);
+    }
+  </script>
+</body>
+</html>

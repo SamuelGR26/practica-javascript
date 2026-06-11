@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Práctica 6</title></head>
+<body>
+  <!-- practica6.html
+       Sistema de calificaciones -->
+  <h1>Práctica 6 — Sistema de Calificaciones</h1>
+  Nota (0-100): <input id="nota" type="number" value="85" min="0" max="100">
+  <button onclick="run()">Calcular</button>
+  <pre id="out"></pre>
+
+  <script>
+    function letra(n){
+      if(n>=90 && n<=100) return 'A';
+      if(n>=80) return 'B';
+      if(n>=70) return 'C';
+      if(n>=60) return 'D';
+      return 'F';
+    }
+    function run(){
+      const n = Number(document.getElementById('nota').value);
+      const texto = `Nota: ${n}\nResultado: ${letra(n)}`;
+      document.getElementById('out').textContent = texto;
+      console.log(texto);
+    }
+  </script>
+</body>
+</html>

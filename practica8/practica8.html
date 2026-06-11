@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Práctica 8</title></head>
+<body>
+  <!-- practica8.html
+       Tabla de multiplicar usando for -->
+  <h1>Práctica 8 — Tabla de Multiplicar</h1>
+  Número: <input id="n" type="number" value="5">
+  <button onclick="run()">Generar</button>
+  <pre id="out"></pre>
+
+  <script>
+    function run(){
+      const n = Number(document.getElementById('n').value);
+      let lines = [];
+      for(let i=1;i<=10;i++) lines.push(`${n} x ${i} = ${n*i}`);
+      const texto = lines.join('\n');
+      document.getElementById('out').textContent = texto;
+      console.log(texto);
+    }
+  </script>
+</body>
+</html>

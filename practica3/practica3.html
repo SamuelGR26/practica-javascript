@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Práctica 3</title></head>
+<body>
+  <!-- practica3.html
+       Conversor Celsius -> Fahrenheit -->
+  <h1>Práctica 3 — Conversor de Temperatura</h1>
+  Celsius: <input id="c" type="number" value="30">
+  <button onclick="run()">Convertir</button>
+  <pre id="out"></pre>
+
+  <script>
+    function celsiusAFahrenheit(c){ return (c * 9/5) + 32; }
+    function run() {
+      const c = Number(document.getElementById('c').value);
+      const f = celsiusAFahrenheit(c);
+      const texto = `${c}°C = ${f}°F`;
+      document.getElementById('out').textContent = texto;
+      console.log(texto);
+    }
+  </script>
+</body>
+</html>
